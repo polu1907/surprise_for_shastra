@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Typewriter Surprise</title>
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+    }
+    body {
+      background:
+        linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.8)),
+        url('https://images.hdqwalls.com/wallpapers/fc-barcelona-hd.jpg') center/cover no-repeat;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Courier New', Courier, monospace;
+      color: #ffffff;
+      padding: 20px;
+      text-align: center;
+      white-space: pre-wrap;
+    }
+    #typewriter {
+      font-size: 1.6rem;
+      line-height: 1.5;
+      border-right: 3px solid #fff;
+      animation: blinkCursor 0.7s infinite step-end;
+      max-width: 800px;
+    }
+    @keyframes blinkCursor {
+      from { border-color: #fff; }
+      to { border-color: transparent; }
+    }
+  </style>
+</head>
+<body>
+  <div id="typewriter">Loading surprise...</div>
+
+  <script>
+    const message = `Hey👋🏼 red flag🚩️ 
+
+
+From day one, you've been more than a friend. Every laugh we shared through late-night chats was truly special to me 😊
+
+this gift is not to impress you but also I wanted to do something special for you for the last time in my life...
+
+I hope you love this surprise & it brings a smile to your face! 😊
+
+sorry for being misunderstand you....its time to let you go completely...
+
+Maybe in the another universe we will meet again, but for now, it's time to say goodbye.No more holding on... no more waiting for a future that will never come.
+
+আর হ্যাঁ তুই যা চেয়েছিলিস তাই হলো.....yes,you win❤️.I respect your choice.... in future তোর মনের মতন কাউকে নিয়ে ভালো থাকিস ....
+
+আর আমার জন্য নাহয় রাগটাই জমিয়ে রাখিস আর ভালোবাসাটা অন্য কারোর জন্য ||
+
+the story ended here, but love never ends...
+
+tere pyar main dil haar ke maine sabkuch gawaaya !!! no regrets ❤️
+
+love you so much❤️❤️❤️
+
+ভালোথাকিস❤️,
+
+from a অসহ্যকর person 😊
+
+`;
+    
+    const loadingText = `Loading surprise...
+
+`;
+
+    const el = document.getElementById('typewriter');
+    el.textContent = ""; // Clear the loading text
+    let i = 0;
+    function typeNext() {
+      if (i < message.length) {
+        el.textContent += message.charAt(i++);
+        setTimeout(typeNext, 50);
+      } else {
+        el.style.borderRight = 'none';
+      }
+    }
+    window.onload = typeNext;
+  </script>
+</body>
+</html>
